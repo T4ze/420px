@@ -1,0 +1,45 @@
+
+
+/!\ Include header each page to redirect to Register page if not logged
+
+
+Authentification : 4 points
+
+Password encryption
+
+
+Project
+ |- login.php /* View for signin/login form */
+ |- access.php /* Verify access and open session */
+ |- logout.php /* Close session and redirect home */
+ |- profile.php /* Access account informations + Add + list */
+ |- add.php /* Only redirect to editor if success */
+ |- editor.php /* If connected: access editor */
+
+
+
+editor
+======
+
+  - Lightbox
+
+
+login
+=====
+
+Left part (Connection fields)
+---------
+
+  - email
+  - password
+
+Right part (Register fields)
+----------
+
+  - email
+  - password
+  - repeat password
+  - name
+
+
+
