@@ -40,7 +40,7 @@ if (!empty($_GET['type']) && $_GET['type'] == 'rss') {
     return;
 }
 
-if ($_GET['id'] == $_SESSION['user']['id']) {
+if (isset($_SESSION['user']) && $_GET['id'] == $_SESSION['user']['id']) {
     header('Location: /profile.php');
     exit();
 }
