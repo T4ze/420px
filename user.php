@@ -28,11 +28,11 @@ if (!empty($_GET['type']) && $_GET['type'] == 'rss') {
 
     foreach ($u['images'] as $image) {
         $item = $channel->addChild('item');
-        $item_id = $item->addChild('title', $image['id']);
-        $item_path = $item->addChild('link', 'http://localhost/' . $image['path']);
-        $lastBuildDate = gmdate(DATE_RFC2822, strtotime($image['created_at']));
+        $item_id = $item->addChild('title', $image->id);
+        $item_path = $item->addChild('link', 'http://localhost/' . $image->path);
+        $lastBuildDate = gmdate(DATE_RFC2822, strtotime($image->created_at));
         $item_date = $item->addChild('pubDate', $lastBuildDate);
-        $guid = $item->addChild('guid', 'http://localhost/' . $image['path']);
+        $guid = $item->addChild('guid', 'http://localhost/' . $image->path);
         $guid->addAttribute('isPermaLink', 'false'); 
     }
 
